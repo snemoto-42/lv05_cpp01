@@ -10,3 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+int	main(void)
+{
+	Zombie zz;
+
+	Zombie *z1 = zz.zombieHorde(5, "SHOTA");
+	delete[] z1;
+	return (0);
+}
+
+#include <libc.h>
+__attribute__((destructor))
+static void destructor() {
+system("leaks -q zombie");
+}

@@ -10,3 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie::Zombie(void)
+{
+	std::cout << "Constructor called : " << "\n";
+}
+
+Zombie::~Zombie()
+{
+	std::cout << "Destructor called : " << _name << "\n";
+}
+
+void	Zombie::announce(void)
+{
+	std::cout << _name << ": BraiiiiiiinnnzzzZ...\n";
+}

@@ -10,3 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie*	Zombie::newZombie(std::string str)
+{
+	Zombie *z;
+
+	z = new Zombie;
+	z->_name = str;
+	return (z);
+}

@@ -10,3 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie	*Zombie::zombieHorde(int N, std::string str)
+{
+	Zombie *z = new Zombie[N];
+
+	for (int idx = 0; idx < N; idx++)
+	{
+		z[idx]._name = str;
+		z[idx].announce();
+	}
+	return (z);
+}

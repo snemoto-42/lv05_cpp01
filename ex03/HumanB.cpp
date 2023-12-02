@@ -22,7 +22,7 @@ HumanB::~HumanB()
 	;
 }
 
-void	HumanB::setWeapon(Weapon w)
+void	HumanB::setWeapon(Weapon& w)
 {
 	_weapon = &w;
 }

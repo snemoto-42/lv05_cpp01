@@ -12,7 +12,7 @@
 
 #include "Zombie.hpp"
 
-Zombie*	Zombie::newZombie(std::string str)
+Zombie*	Zombie::newZombie(std::string name)
 {
 	Zombie *z;
 
@@ -25,6 +25,6 @@ Zombie*	Zombie::newZombie(std::string str)
 		std::cerr << e.what() << "\n";
 		std::abort();
 	}
-	z->_name = str;
+	z->_name = name;
 	return (z);
 }

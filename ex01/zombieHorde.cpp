@@ -12,7 +12,7 @@
 
 #include "Zombie.hpp"
 
-Zombie	*Zombie::zombieHorde(int N, std::string str)
+Zombie	*Zombie::zombieHorde(int N, std::string name)
 {
 	Zombie *z;
 	
@@ -28,7 +28,7 @@ Zombie	*Zombie::zombieHorde(int N, std::string str)
 
 	for (int idx = 0; idx < N; idx++)
 	{
-		z[idx]._name = str;
+		z[idx]._name = name;
 		z[idx].announce();
 	}
 	return (z);

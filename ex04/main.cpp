@@ -19,10 +19,6 @@ int	main(int argc, char *argv[])
 		std::cout << "Invalid parameters\n";
 		return (0);
 	}
-
-	std::string	file = argv[1];
-	std::string	s1 = argv[2];
-	std::string	s2 = argv[3];
-	
+	Replace r(argv[1], argv[2], argv[3]);
 	return (0);
 }

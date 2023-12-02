@@ -10,3 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+#ifndef __HARL_HPP__
+#define __HARL_HPP__
+
+class Harl
+{
+	public:
+		Harl( void );
+		~Harl( void );
+
+	private:
+		void	debug( void );
+		void	info( void );
+		void	warning( void );
+		void	error( void );
+}
+
+#endif /* __HARL_HPP__ */

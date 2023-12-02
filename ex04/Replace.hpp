@@ -19,13 +19,13 @@
 class Replace
 {
 	public:
-		Replace( void );
+		Replace( std::string, std::string, std::string );
 		~Replace( void );
 
 	private:
-		std::string	file;
-		std::string	s1;
-		std::string	s2;
+		std::string	_file;
+		std::string	_s1;
+		std::string	_s2;
 };
 
 #endif /* __REPLACE_HPP__*/

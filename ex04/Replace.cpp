@@ -12,9 +12,11 @@
 
 #include "Replace.hpp"
 
-Replace::Replace(void)
+Replace::Replace(std::string f, std::string s1, std::string s2)
 {
-	;
+	_file = f;
+	_s1 = s1;
+	_s2 = s2;
 }
 
 Replace::~Replace(void)

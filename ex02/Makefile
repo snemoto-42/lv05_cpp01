@@ -15,6 +15,7 @@
 # **************************************************************************** #
 
 NAME	= brain
+
 SRCS	= $(shell echo *.cpp)
 OBJDIR	= obj/
 OBJS	= $(SRCS:%.c=$(OBJDIR)%.o)

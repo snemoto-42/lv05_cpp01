@@ -10,3 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanB.hpp"
+
+HumanB::HumanB(std::string str) : _name(str)
+{
+	;
+}
+
+HumanB::~HumanB()
+{
+	;
+}
+
+void	HumanB::setWeapon(Weapon w)
+{
+	_weapon = &w;
+}
+
+void	HumanB::attack()
+{
+	std::cout << _name << " attacks with their " << _weapon->getType() << "\n";
+}

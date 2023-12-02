@@ -14,15 +14,16 @@
 # Variables																	   #
 # **************************************************************************** #
 
-NAME	= megaphone
+NAME	= weapon
+
 SRCS	= $(shell echo *.cpp)
 OBJDIR	= obj/
 OBJS	= $(SRCS:%.c=$(OBJDIR)%.o)
 
-CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
-RM		= rm -f
-RMD		= rm -rf
+CXX			= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
+RM			= rm -f
+RMD			= rm -rf
 
 # **************************************************************************** #
 # General Rules																   #
@@ -34,10 +35,10 @@ $(OBJDIR):
 		mkdir -p obj
 
 $(OBJDIR)%.o: %.c
-		$(CC) $(CFLAGS) -c -o $@ $<
+		$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJS)
-		$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+		$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 		${RMD} $(OBJDIR)

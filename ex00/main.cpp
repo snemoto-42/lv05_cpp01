@@ -20,7 +20,17 @@ int	main(void)
 	zz->announce();
 	delete zz;
 
-	Zombie *z2 = new Zombie;
+	Zombie *z2;
+
+	try
+	{
+		z2 = new Zombie;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << "\n";
+		std::abort();
+	}
 	z2->randomChump("NEOTO");
 	delete z2;
 

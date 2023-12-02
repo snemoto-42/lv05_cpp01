@@ -16,7 +16,15 @@ Zombie*	Zombie::newZombie(std::string str)
 {
 	Zombie *z;
 
-	z = new Zombie;
+	try
+	{
+		z = new Zombie;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << "\n";
+		std::abort();
+	}
 	z->_name = str;
 	return (z);
 }

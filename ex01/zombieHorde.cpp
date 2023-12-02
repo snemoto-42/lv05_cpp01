@@ -14,7 +14,17 @@
 
 Zombie	*Zombie::zombieHorde(int N, std::string str)
 {
-	Zombie *z = new Zombie[N];
+	Zombie *z;
+	
+	try
+	{
+		z = new Zombie[N];
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+		std::abort();
+	}
 
 	for (int idx = 0; idx < N; idx++)
 	{

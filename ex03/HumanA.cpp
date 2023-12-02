@@ -10,3 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanA.hpp"
+
+HumanA::HumanA(std::string str, Weapon& w) : _name(str), _weapon(w)
+{
+	;
+}
+
+HumanA::~HumanA()
+{
+	;
+}
+
+void	HumanA::attack()
+{
+	std::cout << _name << " attacks with their " << _weapon.getType() << "\n";
+}

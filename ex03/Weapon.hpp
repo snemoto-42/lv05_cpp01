@@ -10,3 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+#ifndef __WEAPON_HPP__
+#define __WEAPON_HPP__
+
+#include <iostream>
+
+class Weapon
+{
+	public:
+		Weapon( std::string );
+		~Weapon( void );
+
+		const std::string&	getType( void );
+		void				setType( std::string );
+
+	private:
+		std::string	_type;
+};
+
+#endif /* __WEAPON_A_HPP__ */

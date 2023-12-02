@@ -10,3 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+#ifndef __HUMAN_A_HPP__
+#define __HUMAN_A_HPP__
+
+#include <iostream>
+#include "Weapon.hpp"
+
+class	HumanA
+{
+	public:
+		HumanA( std::string, Weapon& );
+		~HumanA( void );
+
+		void	attack( void );
+
+	private:
+		std::string	_name;
+		Weapon& 	_weapon;
+};
+
+#endif /* __HUMAN_A_HPP__ */

@@ -15,6 +15,7 @@
 # **************************************************************************** #
 
 NAME	= zombie
+
 SRCS	= $(shell echo *.cpp)
 OBJDIR	= obj/
 OBJS	= $(SRCS:%.c=$(OBJDIR)%.o)

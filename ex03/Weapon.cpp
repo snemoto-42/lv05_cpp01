@@ -10,3 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Weapon.hpp"
+
+Weapon::Weapon(std::string str) : _type(str)
+{
+	;
+}
+
+Weapon::~Weapon(void)
+{
+	;
+}
+
+const std::string&	Weapon::getType()
+{
+	const std::string& r = _type;
+	return(r);
+}
+
+void Weapon::setType(std::string str)
+{
+	_type = str;
+}

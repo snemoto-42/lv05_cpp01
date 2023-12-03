@@ -6,7 +6,7 @@
 /*   By: snemoto <snemoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:48:30 by snemoto           #+#    #+#             */
-/*   Updated: 2023/10/15 17:03:51 by snemoto          ###   ########.fr       */
+/*   Updated: 2023/12/03 14:34:08 by snemoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,8 @@ void	Harl::complain(std::string level)
 	size_t	idx;
 
 	for (idx = 0; idx < sizeof(array) / sizeof(*array); idx++)
-	{
 		if (level.compare(array[idx]) == 0)
 			break ;
-	}
 
 	switch( idx )
 	{
@@ -48,7 +46,7 @@ void	Harl::complain(std::string level)
 			error();
 			break ;
 		default :
-			std::cout << "Not found\n";
+			std::cout << "[ Probably complaining about insignificant problems ]\n";
 	}
 }
 

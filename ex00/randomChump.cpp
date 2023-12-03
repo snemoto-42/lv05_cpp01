@@ -6,7 +6,7 @@
 /*   By: snemoto <snemoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:48:30 by snemoto           #+#    #+#             */
-/*   Updated: 2023/10/15 17:02:43 by snemoto          ###   ########.fr       */
+/*   Updated: 2023/12/03 13:56:01 by snemoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,19 @@
 
 void	Zombie::randomChump(std::string name)
 {
-	Zombie z;
+	Zombie *z2;
 
-	z._name = name;
-	z.announce();
+	try
+	{
+		z2 = new Zombie;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << "\n";
+		std::abort();
+	}
+
+	z2->_name = name;
+	z2->announce();
+	delete z2;
 }

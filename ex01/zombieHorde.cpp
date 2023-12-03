@@ -6,7 +6,7 @@
 /*   By: snemoto <snemoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:48:30 by snemoto           #+#    #+#             */
-/*   Updated: 2023/10/15 17:03:14 by snemoto          ###   ########.fr       */
+/*   Updated: 2023/12/03 13:58:57 by snemoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,6 @@ Zombie	*Zombie::zombieHorde(int N, std::string name)
 	}
 
 	for (int idx = 0; idx < N; idx++)
-	{
 		z[idx]._name = name;
-		z[idx].announce();
-	}
 	return (z);
 }

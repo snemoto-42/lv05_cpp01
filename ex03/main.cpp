@@ -6,7 +6,7 @@
 /*   By: snemoto <snemoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:48:30 by snemoto           #+#    #+#             */
-/*   Updated: 2023/10/15 12:48:31 by snemoto          ###   ########.fr       */
+/*   Updated: 2023/12/03 14:05:36 by snemoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ int main()
 #include <libc.h>
 __attribute__((destructor))
 static void destructor() {
+std::cout << "\n";
 system("leaks -q weapon");
 }

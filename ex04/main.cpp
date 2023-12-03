@@ -6,7 +6,7 @@
 /*   By: snemoto <snemoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:48:30 by snemoto           #+#    #+#             */
-/*   Updated: 2023/10/15 12:48:31 by snemoto          ###   ########.fr       */
+/*   Updated: 2023/12/03 14:14:00 by snemoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,13 @@ int	main(int argc, char *argv[])
 	}
 	Replace r(argv[1], argv[2], argv[3]);
 	r.exec();
+
 	return (0);
+}
+
+#include <libc.h>
+__attribute__((destructor))
+static void destructor() {
+std::cout << "\n";
+system("leaks -q replace");
 }

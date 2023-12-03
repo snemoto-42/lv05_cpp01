@@ -45,6 +45,7 @@ clean:
 
 fclean:	clean
 		${RM} ${NAME}
+		rm -f out.txt
 
 re:		fclean all
 

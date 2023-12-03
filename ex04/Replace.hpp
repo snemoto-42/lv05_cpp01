@@ -15,12 +15,16 @@
 #define __REPLACE_HPP__
 
 #include <iostream>
+#include <fstream>
+#include <string>
 
 class Replace
 {
 	public:
 		Replace( std::string, std::string, std::string );
 		~Replace( void );
+
+		void	exec( void );
 
 	private:
 		std::string	_file;

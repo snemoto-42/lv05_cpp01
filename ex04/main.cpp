@@ -20,5 +20,6 @@ int	main(int argc, char *argv[])
 		return (0);
 	}
 	Replace r(argv[1], argv[2], argv[3]);
+	r.exec();
 	return (0);
 }

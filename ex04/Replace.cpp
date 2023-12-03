@@ -23,3 +23,38 @@ Replace::~Replace(void)
 {
 	;
 }
+
+void	Replace::exec(void)
+{
+	std::ifstream ifs(_file);
+	if (ifs.fail())
+	{
+		std::cerr << "---Fail to open file---\n";
+		std::exit(0);
+	}
+	
+	std::ofstream ofs("./out.txt");
+	while (!ifs.eof())
+	{
+		std::string	str;
+		getline(ifs, str);
+		if (ifs.bad())
+		{
+			std::cout << "---Error Input---\n";
+			std::exit(0);
+		}
+		std::string::size_type len = str.length();
+		while (1)
+		{
+			std::string::size_type pos = str.find(_s1);
+			if (pos < len)
+			{
+				str.erase(pos, _s1.length());
+				str.insert(pos, _s2);
+			}
+			else
+				break ;
+		}
+		ofs << str << "\n";
+	}
+}

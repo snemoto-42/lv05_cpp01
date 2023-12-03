@@ -6,7 +6,7 @@
 /*   By: snemoto <snemoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:48:30 by snemoto           #+#    #+#             */
-/*   Updated: 2023/12/03 14:14:00 by snemoto          ###   ########.fr       */
+/*   Updated: 2023/12/03 16:03:53 by snemoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char *argv[])
 {
 	if (argc != 4)
 	{
-		std::cout << "Invalid parameters\n";
+		std::cout << "--- Invalid parameters ---\n";
 		return (0);
 	}
 	Replace r(argv[1], argv[2], argv[3]);

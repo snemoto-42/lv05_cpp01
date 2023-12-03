@@ -6,7 +6,7 @@
 /*   By: snemoto <snemoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:48:30 by snemoto           #+#    #+#             */
-/*   Updated: 2023/12/03 14:05:36 by snemoto          ###   ########.fr       */
+/*   Updated: 2023/12/03 17:31:59 by snemoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,13 @@ int main()
 		jim.attack();
 		club.setType("some other type of club");
 		jim.attack();
+		// Weapon  club = Weapon("");
+
+		// HumanB jim("");
+		// jim.setWeapon(club);
+		// jim.attack();
+		// club.setType("");
+		// jim.attack();
 	}
 	return 0;
 }

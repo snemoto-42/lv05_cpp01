@@ -6,7 +6,7 @@
 #    By: snemoto <snemoto@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 19:23:56 by snemoto           #+#    #+#              #
-#    Updated: 2023/09/25 18:00:26 by snemoto          ###   ########.fr        #
+#    Updated: 2023/12/03 14:42:48 by snemoto          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ clean:
 
 fclean:	clean
 		${RM} ${NAME}
-		rm -f out.txt
+		rm -f *.replace
 
 re:		fclean all
 

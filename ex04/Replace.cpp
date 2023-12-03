@@ -6,7 +6,7 @@
 /*   By: snemoto <snemoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:48:30 by snemoto           #+#    #+#             */
-/*   Updated: 2023/10/15 17:03:44 by snemoto          ###   ########.fr       */
+/*   Updated: 2023/12/03 14:41:31 by snemoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	Replace::exec(void)
 		std::exit(0);
 	}
 	
-	std::ofstream ofs("./out.txt");
+	std::ofstream ofs("./file.replace");
 	while (!ifs.eof())
 	{
 		std::string	str;

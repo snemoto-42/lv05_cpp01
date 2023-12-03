@@ -6,7 +6,7 @@
 /*   By: snemoto <snemoto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:48:30 by snemoto           #+#    #+#             */
-/*   Updated: 2023/12/03 14:34:08 by snemoto          ###   ########.fr       */
+/*   Updated: 2023/12/03 15:31:46 by snemoto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,24 @@ void	Harl::complain(std::string level)
 		if (level.compare(array[idx]) == 0)
 			break ;
 
+	void	(Harl::*func_d)() = &Harl::debug;
+	void	(Harl::*func_i)() = &Harl::info;
+	void	(Harl::*func_w)() = &Harl::warning;
+	void	(Harl::*func_e)() = &Harl::error;
+
 	switch( idx )
 	{
 		case 0:
-			debug();
+			(this->*func_d)();
 			break ;
 		case 1:
-			info();
+			(this->*func_i)();
 			break ;
 		case 2:
-			warning();
+			(this->*func_w)();
 			break ;
 		case 3:
-			error();
+			(this->*func_e)();
 			break ;
 		default :
 			std::cout << "[ Probably complaining about insignificant problems ]\n";

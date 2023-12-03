@@ -12,7 +12,18 @@
 
 #include "Harl.hpp"
 
-int	main(void)
+int	main(int argc, char *argv[])
 {
+	if (argc != 2)
+	{
+		std::cout << "[ Probably complaining about insignificant problems ]\n";
+		return (0);
+	}
+
+	std::string msg = argv[1];
+	Harl		h;
+
+	h.complain(msg);
+
 	return (0);
 }

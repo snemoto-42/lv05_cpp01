@@ -14,7 +14,7 @@
 # Variables																	   #
 # **************************************************************************** #
 
-NAME	= harl
+NAME	= harlFilter
 
 SRCS	= $(shell echo *.cpp)
 OBJDIR	= obj/
